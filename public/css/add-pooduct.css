@@ -1,0 +1,13 @@
+*{
+    padding: 0;margin: 0;
+  }
+  .main-header{
+    background-color: rgb(245, 134, 23);
+    width: 100%;
+    height: 3.5rem;
+  }
+  .main-list_item{
+    color: brown;
+    text-decoration: none;
+    list-style: none;
+  }
