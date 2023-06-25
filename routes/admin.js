@@ -5,10 +5,10 @@ const path=require('path');
 
 const rootDir=require('../util/path');
 
-
+//routing to the file
 router.use("/add-product", (req, res, next) => {
-    res.sendFile(path.join(rootDir,'views','add-pooduct.html'));
-}
+res.render('add-pooduct',{pageTitle:'ADd Product',path:'/admin/add-product'})}
+            //filename, dynamic content to be set
 )
 router.post("/admin/add-product", (req, res, next) => {
     console.log(req.body);
