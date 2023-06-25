@@ -1,3 +1,4 @@
+// imports
 const express = require("express");
 const path=require('path');
 const bodyParser = require("body-parser");
@@ -25,5 +26,9 @@ app.use((req,res, next)=>{ //404 error page
     res.status(404).render('404',{pageTitle:'Page not Found !'})
 });
 
+<<<<<<< HEAD
 //listening server
+=======
+//listening the server
+>>>>>>> 44fcd07bdecdf440c1cbacfbe7c79bbdcbdc677c
 app.listen(3000);
