@@ -1,12 +1,19 @@
 <%- include('includes/head.ejs')%>
-   <link rel="stylesheet" href="/css/shop.css">
-</head>
-<body>
-  <%- include('includes/navigation.ejs')%>
+  <link rel="stylesheet" href="/css/shop.css">
+  </head>
 
-  <main>
-    <h1>My Products</h1>
-    <p>List of all products</p>
-  </main>
-  
-  <%- include('includes/end.ejs')%>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+          <ul>
+            <li><a class="main-list_item path==='/'?active:''"  href="/">Shop</a></li>
+            <li><a class="main-list_item path==='/admin/add-product'?active:''" href="/admin/add-product">Add Product</a></li>
+          </ul>
+      </nav>
+    </header>  
+      <main>
+        <h1>My Products</h1>
+        <p>List of all products</p>
+      </main>
+
+      <%- include('includes/end.ejs')%>

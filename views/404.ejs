@@ -1,8 +1,15 @@
-<%- include('includes/head.ejs') %>
+<%-include ('includes/head.ejs') %>
 </head>
 <body>
-    <%-include('includes/navigation.ejs')%>
-    
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul>
+              <li><a class="main-list_item path==='/'?active:''"  href="/">Shop</a></li>
+              <li><a class="main-list_item path==='/admin/add-product'?active:''" href="/admin/add-product">Add Product</a></li>
+            </ul>
+        </nav>
+      </header>      
     <h1>Something went wrong! </h1>
     <p>Error status 404</p>
 <%- include('includes/end.ejs')%>

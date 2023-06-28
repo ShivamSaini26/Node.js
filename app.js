@@ -4,6 +4,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const app = express();
 
+const errorController=require('./controllers/404')
+
 //setting templating engine
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -23,10 +25,7 @@ app.use("/admin", adminRoutes); //order matters when routing
 app.use(shopRoutes); //homepage of the app
 
 //404 route
-app.use((req, res, next) => {
-  //404 error page
-  res.status(404).render("404", { pageTitle: "Page not Found !" });
-});
+app.use(errorController.error);
 
 //server is listening
 app.listen(3000);

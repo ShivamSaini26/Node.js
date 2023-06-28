@@ -1,14 +1,20 @@
-<%- include('includes/head.ejs')%>
+<%-include('includes/head.ejs') %>
    <link rel="stylesheet" href="/css/add-pooduct.css">
 </head>
 <body>
-  <%- include('includes/navigation.ejs')%>
-  
+  <header class="main-header">
+    <nav class="main-nav">
+        <ul>
+          <li><a class="main-list_item path==='/'?active:''"  href="/">Shop</a></li>
+          <li><a class="main-list_item path==='/admin/add-product'?active:''" href="/admin/add-product">Add Product</a></li>
+        </ul>
+    </nav>
+  </header>    
   <main>
     <form action="/" method="POST">
         <input type="text"name="title">
         <button type="submit">Add Product</button>
     </form>
   </main>
-  <%-include('includes/end.ejs')%>
+  <%- include('includes/end.ejs') %>
 
