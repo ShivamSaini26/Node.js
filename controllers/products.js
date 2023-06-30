@@ -12,7 +12,8 @@ product.save();
 };
 
 exports.getProducts= (req, res, next) => {
-    const product=new Product.fetchAll();
+    const product=new Product();
+    Product.fetchAll();
     res.render('shop', { pageTitle: 'ADD Product-Main', path: '/' });
    
   };
